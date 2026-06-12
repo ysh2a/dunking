@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DUNKIN'</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<div class="logo">
+DUNKIN'
+</div>
+
+
+<nav>
+
+<a href="#menu">
+MENU
+</a>
+
+
+<a href="#store">
+STORE
+</a>
+
+
+<button id="cartBtn">
+
+🛒 장바구니
+<span id="cartCount">0</span>
+
+</button>
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+<section class="hero">
+
+
+<div>
+
+
+<h1>
+
+HAPPY<br>
+DONUT DAY 🍩
+
+</h1>
+
+
+<p>
+달콤한 하루를 만드는 던킨 스타일
+</p>
+
+
+<button onclick="scrollMenu()">
+
+메뉴 보기
+
+</button>
+
+
+</div>
+
+
+<img src="images/donut.png">
+
+
+</section>
+
+
+
+
+
+
+
+
+<section id="menu">
+
+
+<h2>
+POPULAR DONUTS
+</h2>
+
+
+
+<div class="products">
+
+
+
+
+
+<div class="card">
+
+
+<img src="images/donut2.png">
+
+
+<h3>
+딸기 도넛
+</h3>
+
+
+<p>
+4500원
+</p>
+
+
+<input 
+type="number"
+id="qty1"
+value="1"
+min="1">
+
+
+
+<button onclick="addCart(
+'딸기 도넛',
+3500,
+document.getElementById('qty1').value
+)">
+
+담기
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<img src="images/donut1.png">
+
+
+<h3>
+초코 도넛
+</h3>
+
+
+<p>
+4000원
+</p>
+
+
+
+<input 
+type="number"
+id="qty2"
+value="1"
+min="1">
+
+
+
+<button onclick="addCart(
+'초코 도넛',
+4000,
+document.getElementById('qty2').value
+)">
+
+담기
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<img src="images/donut3.png">
+
+
+<h3>
+슈가 글레이즈
+</h3>
+
+
+<p>
+3000원
+</p>
+
+
+<input 
+type="number"
+id="qty3"
+value="1"
+min="1">
+
+
+
+<button onclick="addCart(
+'슈가 글레이즈',
+3000,
+document.getElementById('qty3').value
+)">
+
+담기
+
+</button>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section id="store">
+
+
+<h2>
+STORE
+</h2>
+
+
+
+<div class="storeBox">
+
+
+<h3>
+던킨도넛츠 본사
+</h3>
+
+
+<p>
+
+서울특별시 서초구 강남대로 373
+<br>
+(홍우빌딩 1층)
+
+</p>
+
+
+
+
+<a
+
+href="https://map.naver.com/p/entry/place/12948226?c=15.00,0,0,0,dh&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202606122222&locale=ko&svcName=map_pcv5"
+
+target="_blank">
+
+
+<img 
+
+class="map"
+
+src="images/imag.png">
+
+
+</a>
+
+
+
+<p class="click">
+
+지도를 클릭하면 위치 확인
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<div id="cartPanel">
+
+
+<h2>
+장바구니
+</h2>
+
+
+<div id="cartItems">
+
+</div>
+
+
+
+<h3>
+
+총액 :
+
+<span id="total">
+
+0
+
+</span>
+
+원
+
+</h3>
+
+
+
+<button onclick="closeCart()">
+
+닫기
+
+</button>
+
+
+
+<button onclick="checkout()">
+
+결제하기
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
